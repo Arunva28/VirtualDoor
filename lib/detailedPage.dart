@@ -288,8 +288,6 @@ class DetailPage extends StatelessWidget {
     var jsoncodec = const JsonCodec();
     var Json = {"Name": "Arun"};
     var json = jsoncodec.encode(Json);
-    //var url =
-    //    "https://3841xgbq37.execute-api.us-east-2.amazonaws.com/PROD/crowdza";
 
     var url = "http://arunva28.pythonanywhere.com/security/security/";
 
@@ -546,7 +544,7 @@ class Visitor extends StatelessWidget {
       var responseJson = jsoncodec.decode(response.body);
       return responseJson;
     } else {
-      showSnackBar("Failure", context);
+      showSnackBar(response.body.toString(), context);
       return null;
     }
   }

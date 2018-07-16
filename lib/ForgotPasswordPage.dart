@@ -416,10 +416,10 @@ class _ForgotpasswordemailPageState extends State<ForgotpasswordemailPage> {
             fullscreenDialog: true,
           ));
     } else {
-      showSnackBar(responseJson);
+      showSnackBar(response.body.toString());
     }
 
-    return responseJson;
+    return response.body.toString();
   }
 
   Future _validateEmail() async {
